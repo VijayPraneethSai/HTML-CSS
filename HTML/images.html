@@ -1,0 +1,116 @@
+<!-- Storing images on your site
+
+If you are building a site from scratch, it is good practice to create a folder for all of the images the site uses
+
+On a big site you might like to add subfolders inside the images folder. For example, images such as logos and buttons might sit in a folder called interface, product photographs might sit in a page called products, and images related to news might live in a folder called news.
+
+Adding Images
+
+<img>
+
+<img src="images/quokka.jpg" alt="A family of quokka" title="The quokka is an Australian marsupial that is similar in size to the domestic cat." />
+
+It must carry the 
+following two attributes:
+
+src
+This tells the browser where it can find the image file. This will usually be a relative URL pointing to an image on your own site.
+
+alt
+This provides a text description of the image which describes the image if you cannot see it.
+
+title
+You can also use the title attribute with the <img> element to provide additional information about the image. Most browsers will display the content of this 
+attribute in a tootip when the user hovers over the image.
+
+alt text should be used so that users with visual impairments can understand what the image is.
+
+If the image is just to make a page look more attractive (it and has no meaning) still the alt attribute should be used but the quotes should be left empty.
+
+Height & Width of Images
+<img src="images/quokka.jpg" alt="A family of quokka" width="600" height="450" />
+
+but we should use CSS more commonly.
+
+Where to place images in your code 
+1: Before a paragraph
+The paragraph starts on a new line after the image.
+
+2: Inside the start of a paragraph
+The first row of text aligns with the bottom of the image.
+
+3: In the mIddle of a paragraph
+The image is placed between the words of the paragraph that it appears in
+
+Where you place the image in the code is important because browsers show HTML elements 
+in one of two ways:
+
+Block elements always appear on a new line. Examples of block elements include the <h1> and <p> elements.
+
+If the <img> is followed by a block level element (such as  a paragraph) then the block level element will sit on a new line after the image.
+
+Inline elements sit within a block level element and do not start on a new line. Examples of inline elements include the <b>, <em>, and <img> elements.
+
+If the <img> element is inside a block level element, any text or other inline elements will flow around the image.
+
+HTML5: Figure and Figure Caption
+
+<figure>
+Images often come with captions. HTML5 has introduced 
+a new <figure> element to contain images and their caption so that the two are associated. 
+You can have more than one image inside the <figure> 
+element as long as they all share the same caption.
+ 
+<figcaption>
+The <figcaption> element has been added to HTML5 in order 
+to allow web page authors to add a caption to an image.
+Before these elements were created there was no way to 
+associate an <img> element with its caption.
+
+<figure>
+ <img src="images/otters.jpg" alt="Photograph of 
+ two sea otters floating in water">
+ <br />
+  <figcaption>Sea otters hold hands when they 
+ sleep so they don't drift away from each 
+ other.</figcaption>
+ </figure>
+
+ Example:
+ 
+ <html>
+ <head>
+  <title>Images</title>
+ </head>
+ <body>
+  <h1>
+   <img src="images/logo.gif"
+      alt="From A to Zucchini" />
+  </h1>
+  <figure>
+   <img src="images/chocolate-islands.jpg" 
+      alt="Chocolate Islands"
+      title="Chocolate Islands Individual Cakes" />
+   <p>
+    <figcaption>
+     This recipe for individual chocolate 
+     cakes is so simple and so delectable!
+    </figcaption>
+   </p>
+  </figure>
+  <h4>More Recipes:</h4>
+  <p>
+   <img src="images/lemon-posset.jpg" 
+      alt="Lemon Posset" 
+      title="Lemon Posset Dessert" />
+   <img src="images/roasted-brussel-sprouts.jpg" 
+      alt="Roasted Brussel Sprouts" 
+      title="Roasted Brussel Sprouts Side Dish" />
+   <img src="images/zucchini-cake.jpg" 
+      alt="Zucchini Cake" 
+      title="Zucchini Cake No Frosting" />
+  </p>
+ </body>
+ </html>
+
+ -->

@@ -1,0 +1,155 @@
+<!-- Writing Links
+
+ <a href="http://www.imdb.com">IMDB</a>
+
+ When you link to a different website, the value of the href attribute will be the full web address for the site, which is known as an absolute URL.
+
+AbsoLute urLs
+URL stands for Uniform Resource Locator. Every web page has its own URL
+
+An absolute URL starts with the domain name for that site, and can be followed by the path to a specific page. If no page is specified, the site will display the 
+homepage.
+
+Linking to other Pages on the same site
+
+When you are linking to other pages within the same site, you do not need to specify the domain name in the URL. You can use a shorthand known as a relative URL.
+
+When you are linking to other pages within the same site, you do not need to specify the domain name in the URL. You can use a shorthand known as a 
+relative URL.
+If all the pages of the site are in 
+the same folder, then the value 
+of the href attribute is just the 
+name of the file.
+If you have different pages of a 
+site in different folders, then you 
+can use a slightly more complex 
+syntax.
+
+<p>
+ <ul>
+ <li><a href="index.html">Home</a></li>
+ <li><a href="about-us.html">About</a></li>
+ <li><a href="movies.html">Movies</a></li>
+ <li><a href="contact.html">Contact</a></li>
+ </ul>
+ </p>
+
+Relative urLs
+When linking to other pages within the same site, you can 
+use relative URLs.
+
+reLAtive Link tyPe
+exAmPLe (from diagram on previous page)sAme FoLDer
+
+To link to a file in the same folder, just use the file 
+name. (Nothing else is needed.)
+To link to music reviews from the music homepage:
+<a href="reviews.html">Reviews</a>
+ 
+chiLD FoLDer
+For a child folder, use the name of the child folder, 
+followed by a forward slash, then the file name.
+To link to music listings from the homepage:
+<a href="music/listings.html">Listings</a>
+ 
+ grAnDchiLD FoLDer
+Use the name of the child folder, followed by a 
+forward slash, then the name of the grandchild 
+folder, followed by another forward slash, then the 
+file name.
+ To link to DVD reviews from the homepage:
+ <a href="movies/dvd/reviews.html">
+ Reviews</a>
+
+ PArent FoLDer
+Use ../ to indicate the folder above the current one, 
+then follow it with the file name.
+To link to the homepage from the music reviews:
+<a href="../index.html">Home</a>
+
+grAndpArent FoLDer
+Repeat the ../ to indicate that you want to go up 
+two folders (rather than one), then follow it with the 
+file name.
+To link to the homepage from the DVD reviews:
+<a href="../../index.html">Home</a>
+
+
+Email Links
+
+mailto:
+
+You use the <a> element. However, this time the value of the href attribute starts with mailto: and is followed by 
+the email address you want the email to be sent to
+
+<a href="mailto:jon@example.org">Email Jon</a>
+
+Open Links in a new window
+
+target attribute
+If you want a link to open in a new window, you can use the target attribute on the opening <a> tag. The value of this attribute should be _blank.
+
+ <a href="http://www.imdb.com" target="_blank">
+ Internet Movie Database</a> (opens in new window)
+
+
+ Linking to a specific part of the same page:
+
+<h1 id="top">Film-Making Terms</h1>
+ <a href="#arc_shot">Arc Shot</a><br />
+ <a href="#interlude">Interlude</a><br />
+ <a href="#prologue">Prologue</a><br /><br />
+ <h2 id="arc_shot">Arc Shot</h2>
+ <p>A shot in which the subject is photographed by an 
+ encircling or moving camera</p>
+ <h2 id="interlude">Interlude</h2>
+ <p>A brief, intervening film scene or sequence, not 
+ specifically tied to the plot, that appears 
+ within a film</p>
+ <h2 id="prologue">Prologue</h2>
+ <p>A speech, preface, introduction, or brief scene 
+ preceding the the main action or plot of a film; 
+ contrast to epilogue</p>
+ <p><a href="#top">Top</a></p> 
+
+ 
+ Linking to a specific part of another page:
+ 
+The href attribute will contain the address for the 
+page (either an absolute URL or a relative URL), followed by the  # symbol, followed by the value of the id attribute that is used on the element you are linking to.
+
+For example, to link to the bottom of the homepage of the website that accompanies this book, you would write:
+ 
+ <a href="http:/www.htmlandcssbookcom/#bottom">
+
+ Example:
+
+ <html>
+ <head>
+  <title>Links</title>
+ </head>
+ <body>
+  <h1 id="top">Film Folk</h1>
+  <h2>Festival Diary</h2>
+  <p>Here are some of the film festivals we 
+    will be attending this year.<br />Please 
+    <a href="mailto:filmfolk@example.org">
+    contact us</a> if you would like more 
+    information.</p>
+  <h3>January</h3>
+  <p><a href="http://www.sundance.org">
+    Sundance Film Festival</a><br />
+    Park City, Utah, USA<br />
+    20 - 30 January 2011</p>
+  <h3>February</h3>
+  <p><a href="http://www.tropfest.com">
+    Tropfest</a><br />
+    Sydney, Australia<br />
+    20 February 2011</p>
+  
+  <p><a href="about.html">About Film Folk</a></p>
+  <p><a href="#top">Top of page</a></p>
+ </body>
+ </html>
+
+ -->
