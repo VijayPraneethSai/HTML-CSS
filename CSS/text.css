@@ -1,0 +1,344 @@
+ Font Family:
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+  <title>Font Family</title>
+  <style type="text/css">
+   body {
+    font-family: Georgia, Times, serif;}
+   h1, h2 {
+    font-family: Arial, Verdana, sans-serif;}
+   .credits {
+    font-family: "Courier New", Courier, 
+     monospace;}
+  </style>
+ </head>
+ <body>
+  <h1>Briards</h1>
+  <p class="credits">by Ivy Duckett</p>
+  <p class="intro">The <a class="breed" 
+    href="http://en.wikipedia.org/wiki/
+    Briard">briard</a>, or berger de brie, is 
+    a large breed of dog traditionally used as 
+    a herder and guardian of sheep...</p>
+ </body>
+ </html>
+
+You can specify a list of fonts separated by commas so that, if the user does not have your first choice of typeface installed, the browser can try to use an alternative font from the list.
+
+Designers suggest pages usually look better if they use no more than three typefaces on a page.
+
+font-size:
+
+body {
+ font-family: Arial, Verdana, sans-serif;
+ font-size: 12px;}
+ h1 {
+ font-size: 200%;}
+ h2 {
+ font-size: 1.3em;}
+
+ Ways to specify the size of a font
+
+ 1. Pixels
+ 2. Percentages
+    the default sixe of text in browsers is 16px.
+    So a size of 75% would be the equivalent of 12px, and 200% would be 32px.
+3.  EMs
+    An em is equivalent to the width of a letter m.
+    Ems allow you to change the size of text relative to the size of the text in the parent element. Since the default size of text in web browsers is 16 pixels, you can use similar rules to those shown for percentages.
+
+@font-face
+
+@font-face {
+ font-family: 'ChunkFiveRegular';
+ src: url('fonts/chunkfive.eot');}
+ h1, h2 {
+ font-family: ChunkFiveRegular, Georgia, serif;}
+
+ @font-face allows you to use a font, even if it is not installed on the computer of the person browsing, by allowing you to specify a path to a copy of the font, which will be downloaded if it is not on the user's machine.
+
+font-family
+This specifies the name of the font. This name can then be used as a value of the font-family property in the rest of the style sheet (as shown in the rule for the <h1>and <h2> elements).
+
+src
+This specifies the path to the font. 
+
+Google also provides open source fonts. Rather than adding the @font-face rule to your own style sheet, you link to a CSS file and font files on their servers: 
+www.google.com/webfonts
+
+ @font-face {
+ font-family: 'ChunkFiveRegular';
+ src: url('fonts/chunkfive.eot');
+ src: url('fonts/chunkfive.eot?#iefix') 
+       format('embedded-opentype'),
+      url('fonts/chunkfive.woff') format('woff'),
+      url('fonts/chunkfive.ttf') 
+    format('truetype'),
+      url('fonts/chunkfive.svg#ChunkFiveRegular') 
+      format('svg');}
+
+`format
+ This specifies the format that the font is supplied in.
+
+ Different browsers support different formats for fonts   (in the same way that they support different audio and video formats), so you will need to supply the font in several variations to reach all browsers. If you do not have all of these formats for your font, you can upload the font to a website called FontSquirrel where they will convert it for you: 
+ www.fontsquirrel.com/fontface/generator
+
+ font-weight:
+  
+ .credits {
+ font-weight: bold;}
+ 
+ The font-weight property allows you to create bold text. There are two values that this property commonly takes:
+
+ 1. normal
+ 2. bold
+
+ font-style:
+
+ There are three values this property can take:
+ 1. normal
+ 2. italic
+ 3. oblique
+
+ .credits {
+ font-style: italic;}
+
+ text-tranform:
+
+ h1 {
+ text-transform: uppercase;}
+ h2 {
+ text-transform: lowercase;}
+ .credits {
+ text-transform: capitalize;}
+
+ Text-decoration:
+
+ Allows you to specify the following values:
+
+ 1. none
+ 2. underline
+ 3. overline
+ 4. line-through
+ 5. blink
+     This animates the text to make it flash on and off (however this is generally frowned upon, as it is considered rather annoying).
+
+ .credits {
+ text-decoration: underline;}
+ a {
+ text-decoration: none;}
+
+line-height:
+p {
+ line-height: 1.4em;}
+
+line-height = leading + font-size
+
+Increasing the line-height makes the vertical gap between lines of text larger
+
+A good starter setting is around 1.4 to 1.5em. Because users can adjust the default size of text in their browser, the value of the lineheight  property is best given in ems, not pixels, so that the gap between lines is relative to the size of text the user has selected.
+
+ letter-spacing, word-spacing: 
+ h1, h2 {
+ text-transform: uppercase;
+ letter-spacing: 0.2em;}
+ .credits {
+ font-weight: bold;
+ word-spacing: 1em;}
+
+ text-align:
+
+ h1 {
+ text-align: left;}
+ p {
+ text-align: justify;}
+ .credits {
+ text-align: right;}
+
+left
+This indicates that the text should be left-aligned.
+right
+This indicates that the text should be right-aligned.
+center
+This allows you to center text.justify
+This indicates that every line in a paragraph, except the last line,  should be set to take up the full width of the containing box.
+
+vertical-align:
+ It is more commonly used with inline elements such as <img>, <em>, or <strong> elements. When used with these elements, it performs a task very similar to the HTML align attribute used on the <img> element.
+  The values it can take are:
+ baseline
+ sub
+ super
+ top
+ text-top
+ middle
+ bottom
+ text-bottom
+
+  It can also take a length (usually specified in pixels or ems) or a percentage of the line height.
+
+  #six-months {
+ vertical-align: text-top;}
+ #one-year {
+ vertical-align: baseline;}
+ #two-years {
+ vertical-align: text-bottom;}
+
+text-indent:
+
+h1 {
+ background-image: url("images/logo.gif");
+ background-repeat: no-repeat;
+ text-indent: -9999px;}
+ .credits {
+ text-indent: 20px;}
+
+text-shadow:
+
+p.one {
+ background-color: #eeeeee;
+ color: #666666;
+ text-shadow: 1px 1px 0px #000000;}
+ p.two {
+ background-color: #dddddd;
+ color: #666666;
+ text-shadow: 1px 1px 3px #666666;}
+ p.three {
+ background-color: #cccccc;
+ color: #ffffff;
+ text-shadow: 2px 2px 7px #111111;}
+ p.four {
+ background-color: #bbbbbb;
+ color: #cccccc;
+ text-shadow: -1px -2px #666666;}
+ p.five {
+ background-color: #aaaaaa;
+ color: #ffffff;
+ text-shadow: -1px -1px #666666;}
+
+The value of this property is quite complicated because it can take three lengths and a color for 
+the drop shadow. 
+
+The first length indicates how far to the left or right the shadow should fall.
+ 
+The second value indicates the distance to the top or bottom that the shadow should fall.
+ 
+The third value is optional and specifies the amount of blur that should be applied to the drop 
+shadow.
+
+The fourth value is the color of the drop shadow.
+
+ :first-letter, :first-line:
+
+ p.intro:first-letter {font-size: 200%;}
+ p.intro:first-line {font-weight: bold;}
+
+ :link, :visited :
+
+ a:link {
+ color: deeppink;
+ text-decoration: none;}
+ a:visited {
+ color: black;}
+ a:hover {
+ color: deeppink;
+ text-decoration: underline;}
+ a:active {
+ color: darkcyan;}
+
+ :link
+ This allows you to set styles for links that have not yet been visited. 
+
+:visited
+ This allows you to set styles for 
+links that have been clicked on.
+
+:active
+ This is applied when an element is being activated by a user; for example, when a button is being pressed or a link being clicked.
+
+:hover
+This is applied when a user hovers over an element with a pointing device such as a mouse.
+ 
+:focus
+This is applied when an element has focus. Any element that you can interact with, such as a link you can click on or any form control can have focus.
+Focus occurs when a browser discovers that you are ready to interact with an element on the page. For example, when your cursor is in a form input ready to accept typing, that element is said to have focus. 
+
+When pseudo-classes are used, they should appear in this 
+order: :link, :visited, :hover, :focus, :active.
+
+p[class]
+Targets any <p> element with an attribute called class.
+
+p[class = "dog"]
+targets any <p> element with an attribute called class whose value is dog.
+
+p[class~="dog"]
+targets any <p> element with an attribute called class whose value is a list of space-seperated words, one of which is dog
+
+p[attr^"d"]
+targets any <p> element with an attribute whose value begins with the letter 'd'
+
+p[attr*"d"]
+targets any <p> element with an attribute whose value contains letter 'd'
+
+p[attr$"g"]
+targets any <p> element with an attribute whose value ends with the letter 'd'
+
+Example:
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+  <title>Text</title>
+  <style type="text/css">
+   body {
+    padding: 20px;}
+   h1, h2, h3, a {
+    font-weight: normal;
+    color: #0088dd;
+    margin: 0px;}
+   h1 {
+    font-family: Georgia, Times, serif;
+    font-size: 250%;
+    text-shadow: 2px 2px 3px #666666;
+    padding-bottom: 10px;}
+   h2 {
+    font-family: "Gill Sans", Arial, sans-serif;
+    font-size: 90%;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;}
+   h3 {
+    font-size: 150%;}
+   p {
+    font-family: Arial, Verdana, sans-serif;
+    line-height: 1.4em;
+    color: #665544;}
+   p.intro:first-line {
+    font-weight: bold;}
+   .credits {
+    font-style: italic; 
+    text-align: right;}
+   a {
+    text-decoration: none;}
+   a:hover {
+    text-decoration: underline;}
+  </style>
+ </head>
+ <body>
+ <h1>Briards</h1>
+ <h2>A Heart wrapped in fur</h2>
+ <p class="intro">The <a class="breed" href="http://en.wikipedia.org/wikiBriard">
+ briard</a>, or berger de brie, is a large breed of dog traditionally used as a 
+ herder and guardian of sheep.</p>
+ <h3>Breed History</h3>
+ <p>The briard, which is believed to have originated in France, has been bred for 
+ centuries to herd and to protect sheep. The breed was used by the French Army as 
+ sentries, messengers and to search for wounded soldiers because of its fine sense 
+ of hearing. Briards were used in the First World War almost to the point of 
+ extinction. Currently the population of briards is slowly recovering. 
+ Charlemagne, Napoleon, Thomas Jefferson and Lafayette all owned briards.</p>
+ <p class="credits">by Ivy Duckett</p>
+ </body>
+ </html>
