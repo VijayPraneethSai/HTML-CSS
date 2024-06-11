@@ -1,3 +1,219 @@
+Controlling Sizes of Images in CSS:
+
+img.large { 
+width: 500px; 
+height: 500px;} 
+img.medium { 
+width: 250px; 
+height: 250px;}
+ img.small { 
+width: 100px; 
+height: 100px;}
+
+<img src="images/magnolia-large.jpg"
+ class="large" alt="Magnolia" /> 
+<img src="images/magnolia-medium.jpg"
+ class="medium" alt="Magnolia" /> 
+<img src="images/magnolia-small.jpg"
+ class="small" alt="Magnolia" />
+
+Aligning Images Using CSS:
+ 
+ img.align-left {
+ float: left;
+ margin-right: 10px;}
+ img.align-right {
+ float: right;
+ margin-left: 10px;}
+ img.medium {
+ width: 250px;
+ height: 250px;}
+
+ <p><img src="images/magnolia-medium.jpg" 
+ alt="Magnolia" class="align-left medium" />
+ <b><i>Magnolia</i></b> is a large genus that 
+ contains over 200 flowering plant species...</p>
+ <p><img src="images/magnolia-medium.jpg" 
+ alt="Magnolia" class="align-right medium" />
+ Some magnolias, such as <i>Magnolia stellata</i> 
+ and <i>Magnolia soulangeana</i>, flower quite 
+ early in the spring before the leaves open...</p>
+
+Centering Images Using CSS:
+ 
+By default, images are inline 
+elements. This means that they 
+flow within the surrounding text. 
+In order to center an image, it 
+should be turned into a block
+level element using the display 
+property with a value of block. 
+
+Once it has been made into a 
+block-level element, there are 
+two common ways in which you 
+can horizontally center an image:
+ 
+ 1: On the containing element, 
+you can use the text-align 
+property with a value of center.
+ 
+ 2: On the image itself, you can 
+use the use the margin property 
+and set the values of the left and 
+right margins to auto.
+
+img.align-center { 
+display: block; 
+margin: 0px auto;} 
+img.medium { 
+width: 250px; 
+height: 250px;}
+
+<p><img src="images/magnolia-medium.jpg" 
+alt="Magnolia" class="align-center medium" />
+ <b><i>Magnolia</i></b> is a large genus that 
+ contains over 200 flowering plant species. It 
+ is named after French botanist Pierre Magnol and, 
+ having evolved before bees appeared, the 
+ flowers were developed to encourage pollination 
+ by beetle.</p>
+
+Background Images:
+ p {
+ background-image: url("images/pattern.gif");}
+
+ By default background-image is repeated untill it fills the entire box.
+
+ Repeating Images:
+
+ body {
+ background-image: url("images/header.gif");
+ background-repeat: repeat-x;}
+
+  body {
+ background-image: url("images/tulip.gif");
+ background-repeat: no-repeat;
+ background-attachment: fixed;}
+
+The background-repeat property can have four values:
+
+repeat
+ The background image is 
+repeated both horizontally and 
+vertically (the default way it 
+is shown if the background
+repeat property isn't used).
+
+ repeat-x
+ The image is repeated 
+horizontally only (as shown in 
+the first example on the left).
+ 
+repeat-y
+The image is repeated vertically 
+only.
+ 
+no-repeat
+The image is only shown once
+
+The background attachment: 
+
+fixed
+The background image stays in 
+the same position on the page.
+ 
+scroll
+The background image moves 
+up and down as the user scrolls 
+up and down the page. 
+
+Background position:
+
+ When an image is not being repeated, you can use the 
+background-position property to specify where in the 
+browser window the background image should be placed. 
+
+     left top
+     left center
+     left bottom 
+     center top
+     center center
+     center bottom
+     right top
+     right center
+     right bottom
+If you only specify one value, 
+the second value will default to 
+center.
+
+You can also use a pair of pixels or percentages. These represent 
+the distance from the top left corner of the browser window 
+(or containing box). The top left corner is equal to 0% 0%. The 
+example shown, with values of 50% 50%, centers the image 
+horizontally and vertically.
+
+body {
+ background-image: url("images/tulip.gif");
+ background-repeat: no-repeat;
+ background-position: center top;}
+
+body {
+ background-image: url("images/tulip.gif");
+ background-repeat: no-repeat;
+ background-position: 50% 50%;}
+
+Shorthand background:
+
+body {
+background: #ffffff url("images/tulip.gif") 
+no-repeat top right;
+
+The properties must be specified 
+in the following order, but you 
+can miss any value if you do not 
+want to specify it.
+ 1: background-color
+ 2: background-image
+ 3: background-repeat
+ 4: background-attachment
+ 5: background-position
+
+
+Image Rollovers & Sprites
+
+When a use moves the mouse over a button or link we can change
+the background image
+
+This is done by using an image with different styles of same button 
+but the button should have place to show only one image
+This complete image is known as sprite.
+
+using the hover feature we can set the value of background-image position 
+to show the required image.
+
+ a.button {
+ height: 36px;
+ background-image: url("images/button-sprite.jpg");
+ text-indent: -9999px;
+ display: inline-block;}
+ a#add-to-basket {
+ width: 174px;
+ background-position: 0px 0px;}
+ a#framing-options {
+ width: 210px;
+ background-position: -175px 0px;}
+ a#add-to-basket:hover {
+ background-position: 0px -40px;}
+ a#framing-options:hover {
+ background-position: -175px -40px;}
+ a#add-to-basket:active {
+ background-position: 0px -80px;}
+ a#framing-options:active {
+ background-position: -175px -80px;}
+
+
+Example:
  <!DOCTYPE html>
  <html>
  <head>
